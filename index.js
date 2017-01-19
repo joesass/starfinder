@@ -18,6 +18,20 @@ $(document).ready(function() {
       success: function(data) {
       debugger
 
+      let imageResult = 
+      $('div#result').append(imageResult)
+
+
+      }
+
+
+
+
+
+
+
+
+
       }
 
 
