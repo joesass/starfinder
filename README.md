@@ -21,4 +21,4 @@ http://www.strudel.org.uk/lookUP/json/?name=Neptune&callback=lk
 ## Further Goals
 
 - Pull better images from NASA API
-- Add more data
+- Add more data besides for images

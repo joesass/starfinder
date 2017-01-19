@@ -17,18 +17,20 @@ $(document).ready(function() {
       url: query,
       dataType: 'jsonp',
       success: function(data) {
-        // bad data: error
+        $('div#message').text("")
+        // If we get back a message, it means there was bad data
         if (data.message) {
-          return $('div#result').append(data.message)
+          // check if message contains the words 'Did you mean' get
+          // the contents of the anchor tag and put it in the
+          // input box
+          if (data.message.includes("Did you mean")){
+            let suggestion = data.message.match(/<a [^>]+>([^<]+)<\/a>/)[1]
+            $input.val(suggestion)
+            return
+          }
+          return $('div#message').append(data.message)
         }
-
-
         let imageResult = data.image.src
-
-
-
-      // check for bad data
-
       // bad data: no http
         if (imageResult.substring(0, 4) !== "http") {
           imageResult = "http:" + imageResult
@@ -44,12 +46,5 @@ $(document).ready(function() {
       }
 
     }) // end of ajax
-
-
   })
-
-  // display the JSON data
-  // display img
-
-
 })
