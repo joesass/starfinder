@@ -7,3 +7,5 @@ TODO
 5. display JSON data from the API
 6. show image of celestial body searched
 7. bonus: give users suggestions of what to search for - randomly generated
+
+http://strudel.org.uk/lookUP/
