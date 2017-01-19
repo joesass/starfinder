@@ -17,10 +17,18 @@ $(document).ready(function() {
       url: query,
       dataType: 'jsonp',
       success: function(data) {
+        // bad data: error
+        if (data.message) {
+          return $('div#result').append(data.message)
+        }
+
+
         let imageResult = data.image.src
-      // check for Earth
+
+
 
       // check for bad data
+
       // bad data: no http
         if (imageResult.substring(0, 4) !== "http") {
           imageResult = "http:" + imageResult
@@ -30,6 +38,8 @@ $(document).ready(function() {
         if (value.includes('mars')) {
           imageResult = 'http://nssdc.gsfc.nasa.gov/planetary/mars/image/mars.gif'
         }
+
+
 
 
 
