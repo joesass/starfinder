@@ -9,6 +9,7 @@ $(document).ready(function() {
     let value = $input.val()
     // parse the user query
     let parsedInput = value.replace(/\s/g,'+')
+    $input.val('')
     // interpolate query with base url
     let query = URL + parsedInput + '&callback=lk'
     // submit AJAX request
@@ -16,22 +17,25 @@ $(document).ready(function() {
       url: query,
       dataType: 'jsonp',
       success: function(data) {
-      debugger
+        let imageResult = data.image.src
+      // check for Earth
 
-      let imageResult = 
-      $('div#result').append(imageResult)
+      // check for bad data
+      // bad data: no http
+        if (imageResult.substring(0, 4) !== "http") {
+          imageResult = "http:" + imageResult
+        }
+
+        // bad data: if mars
+        if (value.includes('mars')) {
+          imageResult = 'http://nssdc.gsfc.nasa.gov/planetary/mars/image/mars.gif'
+        }
 
 
-      }
 
 
 
-
-
-
-
-
-
+      $('div#result').append(`<img src=${imageResult}>`)
       }
 
 
