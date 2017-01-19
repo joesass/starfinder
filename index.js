@@ -40,39 +40,16 @@ $(document).ready(function() {
         }
 
 
-
-
-
-
-
       $('div#result').append(`<img src=${imageResult}>`)
       }
-
-
-
 
     }) // end of ajax
 
 
-
-
-
-
   })
-
-
-
-
-
-
 
   // display the JSON data
   // display img
-
-
-
-
-
 
 
 })
