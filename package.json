@@ -1,0 +1,28 @@
+{
+  "name": "starfinder",
+  "version": "1.0.0",
+  "description": "A small application that finds and returns celestial body data",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joesass/starfinder.git"
+  },
+  "keywords": [
+    "api",
+    "star",
+    "javascript",
+    "jquery",
+    "ajax",
+    "lookup"
+  ],
+  "author": "Christina Entcheva, Joe Sasson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joesass/starfinder/issues"
+  },
+  "homepage": "https://github.com/joesass/starfinder#readme",
+
+}
